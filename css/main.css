@@ -103,6 +103,7 @@ textarea {
     border: 2px solid #2B2D42;
     font-size: inherit;
     color: inherit;
+    background-color: #EDF2F4;
 }
 
 select,
@@ -124,5 +125,9 @@ button[type="submit"] {
 
 button[type="submit"] + a {
     color: #8D99AE;
+}
+
+#dialog {
+    display: none;
 }
 
