@@ -8,7 +8,7 @@ const listeBackground = document.getElementById('background');
 // Changer le background lors du changement de valeur dans la listre déroulante
 listeBackground.addEventListener('change', function () {
     const image = listeBackground.value
-    document.body.style.backgroundImage = `url(../img/backgounds/${image})`
+    document.body.style.backgroundImage = `url(./img/backgounds/${image})`
 })
 
 const formulaire = document.querySelector('form');
