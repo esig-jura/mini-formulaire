@@ -3,13 +3,13 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     font-family: Arial, sans-serif;
     font-size: 100%;
     font-weight: 400;
     color: #2B2D42;
     background-color: #EDF2F4   ;
-    background-image: url("../img/backgounds/4.jpg");
+    background-image: url("../img/backgounds/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -71,6 +71,7 @@ form li {
     list-style: none;
     margin-bottom: 1.5em;
 }
+
 form li:last-child {
     margin: 0;
 }
@@ -96,13 +97,15 @@ input + label {
     padding-right: .75em;
 }
 
+select,
 input,
 textarea {
-    border: none;
+    border: 2px solid #2B2D42;
     font-size: inherit;
     color: inherit;
 }
 
+select,
 input[type="text"],
 input[type="email"],
 input[type="password"],
