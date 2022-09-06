@@ -9,14 +9,11 @@ html {
     font-weight: 400;
     color: #2B2D42;
     background-color: #EDF2F4   ;
-    background-image: url("../img/background-3.jpg");
+    background-image: url("../img/backgounds/4.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: top center;
-}
-
-body {
-    max-width: 800px;
-    margin: 2rem auto;
+    min-height: 100vh;
 }
 
 h1 {

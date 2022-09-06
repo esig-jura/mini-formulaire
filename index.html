@@ -23,25 +23,34 @@
         <li>
             <fieldset>
                 <legend>Genre</legend>
-                <input type="radio" name="genre" id="femme" value="h" />
+                <input type="radio" name="genre" id="femme" value="f" required />
                 <label for="femme">Femme</label>
 
-                <input type="radio" name="genre" id="homme" value="f"/>
+                <input type="radio" name="genre" id="homme" value="h"/>
                 <label for="homme">Homme</label>
 
-                <input type="radio" name="genre" id="nspp" value="a"/>
+                <input type="radio" name="genre" id="nspp" value="n"/>
                 <label for="nspp">Ne se prononce pas</label>
             </fieldset>
         </li>
         <li>
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email"
+                   placeholder="nom.prenom@mini.form" required>
         </li>
         <li>
             <label for="password">Mote de passe</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
         </li>
-
+        <li>
+            <label for="password-confirm">Confirmer mot de passe</label>
+            <input type="password" name="password-confirm"
+                   id="password-confirm" required>
+        </li>
+        <li>
+            <input type="checkbox" name="connect" id="connect" />
+            <label for="connect">Rester connecté</label>
+        </li>
         <li>
             <button class="right" type="submit">Créer un compte</button>
             <a href="#">Annuler</a>
