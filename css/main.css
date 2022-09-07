@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     font-size: 100%;
@@ -14,7 +19,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    min-height: 100vh;
 }
 
 h1 {
@@ -51,9 +55,9 @@ button:hover  {
 /********* Formulaires *********/
 form {
     padding: 20px;
+    margin: 2em auto 80px;
     background-color: rgba(255,255,255,0.8);
     border: 6px solid #2B2D42;
-    margin: 2em auto;
     max-width: 450px;
     min-width: 300px;
 }

@@ -5,15 +5,22 @@
 
 //Récupération de la liste déroulante
 const listeBackground = document.getElementById('background');
-// Changer le background lors du changement de valeur dans la listre déroulante
+
+// Écoute le changement de sélection "change" de la liste déroulante
+// Et change l'arrière-plan du body
 listeBackground.addEventListener('change', function () {
   const image = listeBackground.value
   document.body.style.backgroundImage = `url(./img/backgounds/${image})`
 })
 
+// Récupère le formulaire
 const formulaire = document.querySelector('form');
+// Ecoute l'envoi du formulaire
+// Fait rebondir le bouton "Créer un compte" puis reset le formulaire
 formulaire.addEventListener('submit', function (event) {
+  // Annule l'envoi du formulaire
   event.preventDefault();
+  // Récupère le bouton "Créer un compte"
   const btCreer = document.querySelector('[type="submit"]');
   btCreer.classList.add('animate__heartBeat');
   btCreer.addEventListener('animationend', function () {
