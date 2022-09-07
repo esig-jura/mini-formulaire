@@ -1,4 +1,5 @@
-/* https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d90429 */
+/********* Styles généraux *********/
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +9,7 @@ body {
     font-size: 100%;
     font-weight: 400;
     color: #2B2D42;
-    background-color: #EDF2F4   ;
+    background-color: white;
     background-image: url("../img/backgounds/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,8 +20,9 @@ body {
 h1 {
     font-size: 3rem;
     text-align: center;
-    color: #EDF2F4;
-    opacity: 50%;
+    color: white;
+    opacity: 80%;
+    text-shadow: 2px 2px 2px black;
 }
 
 a {
@@ -29,14 +31,14 @@ a {
 }
 
 a:hover {
-    color: #EDF2F4;
+    text-decoration: underline;
 }
 
 button {
     padding: .6rem 1rem;
     border: none;
     background-color: #EF233C;
-    color: #EDF2F4;
+    color: white;
 }
 
 button:hover  {
@@ -45,23 +47,17 @@ button:hover  {
     transition: all 0.3s ease;
 }
 
-button[type="reset"] {
-    background-color: #8D99AE;
-    color: #2B2D42;
-}
 
-
-/******************
-FORMULAIRES
-******************/
+/********* Formulaires *********/
 form {
     padding: 20px;
     background-color: rgba(255,255,255,0.75);
     border: 6px solid #2B2D42;
     margin: 2em auto;
     max-width: 450px;
+    min-width: 300px;
 }
-
+/* Structuration du formulaire avec une liste */
 form ul {
     padding-left: 0;
     margin: 0;
@@ -71,39 +67,25 @@ form li {
     list-style: none;
     margin-bottom: 1.5em;
 }
-
+/* Suppression de la marge en bas pour le dernier élément du formulaire */
 form li:last-child {
     margin: 0;
 }
-
-fieldset {
-    margin: 1em 0 2em;
-    padding: 1em;
-    border: 2px solid #2B2D42;
-}
-
-legend {
-    padding: 0 .5em;
-    font-weight: bold;
-}
-
+/* Lables des champs */
 label{
     display: block;
     margin-bottom: .5rem;
+    font-weight: bold;
+    cursor: pointer;
 }
-
-input + label {
-    display: inline;
-    padding-right: .75em;
-}
-
+/* Style par défaut des champs textes et liste */
 select,
 input,
 textarea {
     border: 2px solid #2B2D42;
     font-size: inherit;
     color: inherit;
-    background-color: #EDF2F4;
+    background-color: white;
 }
 
 select,
@@ -115,8 +97,34 @@ textarea {
     padding: 1em;
 }
 
-textarea {
-    min-height: 10em;
+/* Pour les radio et checkboxes */
+label input + span {
+    font-weight: normal;
+}
+
+/* Pour les groupes de champs */
+fieldset {
+    margin: 1em 0 2em;
+    padding: 1em;
+    border: 2px solid #2B2D42;
+}
+
+legend {
+    padding: 0 .5em;
+    font-weight: bold;
+}
+
+/* Pour les groupes de radios et checkboxes */
+.input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+:checked + label,
+:checked + span  {
+    font-weight: bold;
 }
 
 button[type="submit"] {
@@ -124,7 +132,7 @@ button[type="submit"] {
 }
 
 button[type="submit"] + a {
-    color: #8D99AE;
+    color: #2B2D42;
 }
 
 #dialog {
