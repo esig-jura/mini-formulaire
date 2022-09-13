@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     color: #2B2D42;
     background-color: white;
-    background-image: url("../img/backgounds/1.jpg");
+    background-image: url("../img/backgrounds/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -99,6 +99,14 @@ input[type="password"],
 textarea {
     width: 100%;
     padding: 1em;
+}
+
+input[type="email"]:invalid {
+    border-color: #D90429;
+}
+
+input[type="email"]:valid {
+    border-color: darkgreen;
 }
 
 /* Pour les radio et checkboxes */

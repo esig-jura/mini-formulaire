@@ -10,7 +10,7 @@ const listeBackground = document.getElementById('background');
 // Et change l'arrière-plan du body
 listeBackground.addEventListener('change', function () {
   const image = listeBackground.value
-  document.body.style.backgroundImage = `url(./img/backgounds/${image})`
+  document.body.style.backgroundImage = `url(./img/backgrounds/${image})`
 })
 
 // Récupère le formulaire
