@@ -88,14 +88,13 @@ input,
 textarea {
     border: 2px solid #2B2D42;
     font-size: inherit;
+    font-family: inherit;
     color: inherit;
     background-color: white;
 }
 
 select,
-input[type="text"],
-input[type="email"],
-input[type="password"],
+input:not([type="checkbox"]):not([type="radio"]),
 textarea {
     width: 100%;
     padding: 1em;
