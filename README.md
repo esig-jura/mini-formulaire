@@ -8,4 +8,4 @@ tous les types de champs.
 
 ## Outils
 * Palette de couleurs pour la démo : https://flatuicolors.com/
-* Tester son formulaire : https://kode.ch/getpost 
+* Tester son formulaire : https://kode.ch/getpost/ 
