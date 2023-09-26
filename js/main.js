@@ -1,6 +1,6 @@
 /**
  * @author Steve Fallet
- * @since 2022.09.06
+ * @since 2023.09.26
  */
 //Récupération de la liste déroulante
 const listeBackground = document.getElementById('background');
@@ -12,16 +12,32 @@ listeBackground.addEventListener('change', function () {
   document.body.style.backgroundImage = `url(./img/backgrounds/${image})`
 })
 
-// Récupère le formulaire
+/*****************************************
+ ENVOI DU FORMULAIRE
+ *****************************************/
+
+// Récupération du formulaire et de ses éléments
 const formulaire = document.querySelector('form');
+const txtPassword = document.querySelector('#password');
+const txtPasswordConfirm = document.querySelector('#password-confirm');
+
 // Ecoute l'envoi du formulaire
-// Fait rebondir le bouton "Créer un compte" puis reset le formulaire
 formulaire.addEventListener('submit', function (event) {
   // Annule l'envoi du formulaire
   event.preventDefault();
-  // Récupère le bouton "Créer un compte"
-  const btCreer = document.querySelector('[type="submit"]');
-  btCreer.classList.add('animate__heartBeat');
+
+  // Si longueur (length) du mot de passes plus petit que 3
+  if (txtPassword.value.length < 3) {
+    alert('Le mot de passe doit contenir au moins 3 caractères !');
+    return; // Arrête la fonction
+  }
+  // Si les mots de passe ne correspondent pas
+  if (txtPassword.value !== txtPasswordConfirm.value) {
+    alert('Les mots de passe ne correspondent pas !');
+    return; // Arrête la fonction
+  }
+
+  // Si tout est OK, on envoie le formulaire
   alert('Compte créé avec succès !');
-  formulaire.reset()
+  formulaire.submit()
 })
