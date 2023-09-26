@@ -2,7 +2,6 @@
  * @author Steve Fallet
  * @since 2022.09.06
  */
-
 //Récupération de la liste déroulante
 const listeBackground = document.getElementById('background');
 
