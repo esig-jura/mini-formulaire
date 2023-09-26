@@ -22,9 +22,6 @@ formulaire.addEventListener('submit', function (event) {
   // Récupère le bouton "Créer un compte"
   const btCreer = document.querySelector('[type="submit"]');
   btCreer.classList.add('animate__heartBeat');
-  btCreer.addEventListener('animationend', function () {
-    alert('Compte créé avec succès !');
-    formulaire.reset()
-    btCreer.classList.remove('animate__heartBeat')
-  });
+  alert('Compte créé avec succès !');
+  formulaire.reset()
 })
